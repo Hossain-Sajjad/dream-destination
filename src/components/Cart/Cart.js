@@ -1,9 +1,13 @@
 import React from 'react';
+import SelectedPlace from '../SelectedPlace/SelectedPlace';
 
-const Cart = () => {
+const Cart = ({ cart }) => {
     return (
         <div>
-            <p>created cart</p>
+            <p>{cart.length}</p>
+            {
+                cart.map(selectedPlace => <SelectedPlace key={selectedPlace.id} selectedPlace={selectedPlace}  ></SelectedPlace>)
+            }
         </div>
     );
 };

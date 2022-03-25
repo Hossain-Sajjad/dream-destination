@@ -5,6 +5,7 @@ import './Places.css'
 
 const Places = () => {
     const [places, setPlaces] = useState([]);
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
         fetch('places.json')
@@ -12,8 +13,19 @@ const Places = () => {
             .then(data => setPlaces(data))
     }, []);
 
-    const handleAddToCart = (selectedProduct) => {
-        console.log(selectedProduct);
+    const handleAddToCart = (selectedPlace) => {
+        // console.log(selectedProduct);
+        let newCart = [];
+        const exists = cart.find(place => place.id === selectedPlace.id);
+        if (!exists) {
+            newCart = [...cart, selectedPlace];
+        }
+        else {
+            const rest = cart.filter(place => place.id !== selectedPlace.id);
+            newCart = [...rest, exists];
+        }
+        setCart(newCart);
+        console.log(cart)
     }
 
     return (
@@ -28,7 +40,7 @@ const Places = () => {
                 }
             </div>
             <div className="cart-container">
-                <Cart></Cart>
+                <Cart cart={cart}></Cart>
             </div>
         </div>
     );
