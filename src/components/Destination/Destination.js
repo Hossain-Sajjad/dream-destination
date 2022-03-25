@@ -5,6 +5,7 @@ import './Destination.css'
 
 const Destination = (props) => {
     const { name, img, price } = props.place;
+    const handleAddToCart = props.handleAddToCart;
     return (
         <div className='place'>
             <img src={img} alt=""></img>
@@ -12,7 +13,7 @@ const Destination = (props) => {
                 <p className='place-name'>{name}</p>
                 <p>Price: ${price}</p>
             </div>
-            <button className='btn-cart'>
+            <button onClick={() => handleAddToCart(props.place)} className='btn-cart'>
                 <p className='btn-text'>Add to Cart</p>
                 <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>
             </button>
