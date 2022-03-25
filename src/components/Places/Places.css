@@ -1,0 +1,18 @@
+.places-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+.destination-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    margin: 100px 50px;
+}
+.cart-container{
+    background-color: rgba(227, 253, 155, 0.678);
+}
+@media screen and (max-width:390px) {
+    .destination-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

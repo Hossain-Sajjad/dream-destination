@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Destination from '../Destination/Destination';
+import './Places.css'
 
 const Places = () => {
     const [places, setPlaces] = useState([]);
