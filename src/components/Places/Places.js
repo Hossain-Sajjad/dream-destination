@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Destination from '../Destination/Destination';
 
 const Places = () => {
     const [places, setPlaces] = useState([]);
@@ -12,8 +13,18 @@ const Places = () => {
     console.log(places);
 
     return (
-        <div>
+        <div className='places-container'>
+            <div className="destination-container">
+                {
+                    places.map(place => <Destination
+                        key={place.id}
+                        place={place}
+                    ></Destination>)
+                }
+            </div>
+            <div className="cart-container">
 
+            </div>
         </div>
     );
 };
