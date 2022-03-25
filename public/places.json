@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "name": "New York",
+        "price": 4200,
+        "img": "https://unsplash.com/photos/VTLqQe4Ej8I"
+    },
+    {
+        "id": "2",
+        "name": "Barcelona",
+        "price": 3999,
+        "img": "https://unsplash.com/photos/FGJTlEM4gTU"
+    },
+    {
+        "id": "3",
+        "name": "Barcelona",
+        "price": 3999,
+        "img": "https://unsplash.com/photos/FGJTlEM4gTU"
+    },
+    {
+        "id": "4",
+        "name": "Barcelona",
+        "price": 3999,
+        "img": "https://unsplash.com/photos/FGJTlEM4gTU"
+    },
+    {
+        "id": "5",
+        "name": "Barcelona",
+        "price": 3999,
+        "img": "https://unsplash.com/photos/FGJTlEM4gTU"
+    },
+    {
+        "id": "6",
+        "name": "Barcelona",
+        "price": 3999,
+        "img": "https://unsplash.com/photos/FGJTlEM4gTU"
+    },
+    {
+        "id": "7",
+        "name": "Barcelona",
+        "price": 3999,
+        "img": "https://unsplash.com/photos/FGJTlEM4gTU"
+    },
+    {
+        "id": "8",
+        "name": "Barcelona",
+        "price": 3999,
+        "img": "https://unsplash.com/photos/FGJTlEM4gTU"
+    },
+    {
+        "id": "9",
+        "name": "Barcelona",
+        "price": 3999,
+        "img": "https://unsplash.com/photos/FGJTlEM4gTU"
+    }
+]
