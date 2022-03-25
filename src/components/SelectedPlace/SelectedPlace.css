@@ -1,0 +1,10 @@
+.selectedPlace{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lato';
+}
+.selectedPlace img{
+     width: 25px;
+     margin-right: 10px;
+}
