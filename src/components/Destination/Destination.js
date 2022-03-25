@@ -4,13 +4,14 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import './Destination.css'
 
 const Destination = (props) => {
-    const { name, img, price } = props.place;
+    const { name, img, price, days } = props.place;
     const handleAddToCart = props.handleAddToCart;
     return (
         <div className='place'>
             <img src={img} alt=""></img>
             <div className='place-info'>
                 <p className='place-name'>{name}</p>
+                <p>{days}</p>
                 <p>Price: ${price}</p>
             </div>
             <button onClick={() => handleAddToCart(props.place)} className='btn-cart'>

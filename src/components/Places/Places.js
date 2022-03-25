@@ -39,7 +39,7 @@ const Places = () => {
                     ></Destination>)
                 }
             </div>
-            <div className="cart-container">
+            <div>
                 <Cart cart={cart}></Cart>
             </div>
         </div>
