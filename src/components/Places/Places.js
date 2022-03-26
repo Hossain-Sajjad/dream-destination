@@ -32,6 +32,14 @@ const Places = () => {
     }
     const clearBtn = () => {
         setCart([]);
+        setChoosenPlace([]);
+    }
+
+    const [choosenPlace, setChoosenPlace] = useState([]);
+    const chooseBtn = () => {
+        const random = Math.floor(Math.random() * 4);
+        const luckyPlace = cart.find(item => cart.indexOf(item) === random)
+        setChoosenPlace(luckyPlace);
     }
 
     return (
@@ -46,7 +54,7 @@ const Places = () => {
                 }
             </div>
             <div>
-                <Cart cart={cart} clearBtn={clearBtn}></Cart>
+                <Cart cart={cart} clearBtn={clearBtn} chooseBtn={chooseBtn} choosenPlace={choosenPlace}></Cart>
             </div>
         </div>
     );

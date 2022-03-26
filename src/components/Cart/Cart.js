@@ -3,13 +3,8 @@ import ChoosenPlace from '../ChoosenPlace/ChoosenPlace';
 import SelectedPlace from '../SelectedPlace/SelectedPlace';
 import './Cart.css'
 
-const Cart = ({ cart, clearBtn }) => {
-    const [choosenPlace, setChoosenPlace] = useState([]);
-    const chooseBtn = () => {
-        const random = Math.floor(Math.random() * 4);
-        const luckyPlace = cart.find(item => cart.indexOf(item) === random)
-        setChoosenPlace(luckyPlace);
-    }
+const Cart = ({ cart, clearBtn, chooseBtn, choosenPlace }) => {
+
 
     return (
         <div className='cart'>

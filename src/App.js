@@ -9,8 +9,10 @@ function App() {
         <h1>Dream <span>Destination</span></h1>
         <h2>Choose 4 of Your <span>Desired Packages</span></h2>
       </div>
-      <Places></Places>
-      <Question></Question>
+      <div>
+        <Places></Places>
+        <Question></Question>
+      </div>
     </div>
   );
 }
