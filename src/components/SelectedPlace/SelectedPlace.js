@@ -3,6 +3,7 @@ import './SelectedPlace.css'
 
 const SelectedPlace = ({ selectedPlace }) => {
     const { name, img } = selectedPlace;
+    // console.log(name)
     return (
         <div className='selectedPlace'>
             <img src={img} alt="" />

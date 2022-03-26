@@ -24,7 +24,6 @@ const Places = () => {
             newCart = [...rest, exists];
         }
         setCart(newCart);
-        console.log(cart)
     }
 
     return (
