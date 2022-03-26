@@ -3,13 +3,14 @@ import ChoosenPlace from '../ChoosenPlace/ChoosenPlace';
 import SelectedPlace from '../SelectedPlace/SelectedPlace';
 import './Cart.css'
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, clearBtn }) => {
     const [choosenPlace, setChoosenPlace] = useState([]);
     const chooseBtn = () => {
         const random = Math.floor(Math.random() * 4);
-        const abc = cart.find(item => cart.indexOf(item) === random)
-        setChoosenPlace(abc);
+        const luckyPlace = cart.find(item => cart.indexOf(item) === random)
+        setChoosenPlace(luckyPlace);
     }
+
     return (
         <div className='cart'>
             <h3>Select 4 Destination</h3>
@@ -17,7 +18,8 @@ const Cart = ({ cart }) => {
                 cart.map(selectedPlace => <SelectedPlace key={selectedPlace.id} selectedPlace={selectedPlace}  ></SelectedPlace>)
             }
             <ChoosenPlace choosenPlace={choosenPlace}></ChoosenPlace>
-            <button onClick={chooseBtn}>Lucky One</button>
+            <button onClick={chooseBtn} className='cart-btn'>Lucky One</button>
+            <button onClick={clearBtn} className='cart-btn'>Clear All</button>
         </div>
     );
 };

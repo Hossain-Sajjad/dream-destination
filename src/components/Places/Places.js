@@ -14,16 +14,24 @@ const Places = () => {
     }, []);
 
     const handleAddToCart = (selectedPlace) => {
-        let newCart = [];
-        const exists = cart.find(place => place.id === selectedPlace.id);
-        if (!exists) {
-            newCart = [...cart, selectedPlace];
+        if (cart.length >= 4) {
+            alert("Can't choose more than 4!")
         }
         else {
-            const rest = cart.filter(place => place.id !== selectedPlace.id);
-            newCart = [...rest, exists];
+            let newCart = [];
+            const exists = cart.find(place => place.id === selectedPlace.id);
+            if (!exists) {
+                newCart = [...cart, selectedPlace];
+            }
+            else {
+                const rest = cart.filter(place => place.id !== selectedPlace.id);
+                newCart = [...rest, exists];
+            }
+            setCart(newCart);
         }
-        setCart(newCart);
+    }
+    const clearBtn = () => {
+        setCart([]);
     }
 
     return (
@@ -38,7 +46,7 @@ const Places = () => {
                 }
             </div>
             <div>
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart} clearBtn={clearBtn}></Cart>
             </div>
         </div>
     );

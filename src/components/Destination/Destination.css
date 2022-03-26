@@ -37,5 +37,6 @@
     margin-right: 5px;
 }
 .btn-cart:hover{
-    background-color: #FFE0B3;
+    background-color: goldenrod;
+    color: white;
 }

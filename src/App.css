@@ -1,3 +1,8 @@
 .heading{
   text-align: center;
 }
+.heading span{
+  font-family: 'Lato';
+  font-weight: bolder;
+  color: goldenrod;
+}
