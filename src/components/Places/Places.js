@@ -14,7 +14,6 @@ const Places = () => {
     }, []);
 
     const handleAddToCart = (selectedPlace) => {
-        // console.log(selectedProduct);
         let newCart = [];
         const exists = cart.find(place => place.id === selectedPlace.id);
         if (!exists) {
